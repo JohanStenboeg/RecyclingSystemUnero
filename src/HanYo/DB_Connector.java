@@ -7,9 +7,9 @@ import java.sql.DriverManager;
 
 public class DB_Connector {
 
-    private static String url = "jdbc:postgresql://localhost:5432/test";
+    private static String url = "jdbc:postgresql://localhost:5432/postgres";
     private static String user = "postgres";
-    private static String pass = "12345";
+    private static String pass = "";
     private static Connection conn = null;
 
     public static Connection connect() {
