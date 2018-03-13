@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HanYo.GUI.GuiController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HanYo.GuiController">
    <children>
       <GridPane layoutX="3.0" layoutY="1.0" prefHeight="391.0" prefWidth="593.0">
         <columnConstraints>
@@ -53,11 +53,16 @@
                   <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
                </padding>
             </Button>
-            <Label alignment="CENTER" prefHeight="500.0" prefWidth="900.0" text="Label" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Label alignment="CENTER" prefHeight="500.0" prefWidth="900.0" text="Kr" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Italic" size="24.0" />
                </font>
             </Label>
+            <Button mnemonicParsing="false" text="Create DB" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
          </children>
       </GridPane>
    </children>

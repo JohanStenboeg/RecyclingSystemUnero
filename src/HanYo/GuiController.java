@@ -1,4 +1,4 @@
-package HanYo.GUI;
+package HanYo;
 
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
