@@ -8,7 +8,8 @@ public class Connection_Test {
 
 
         DB_Statements statements = new DB_Statements();
-        statements.insertData();
+        //statements.insertData();
+        statements.createDatabase();
 
 
     }
