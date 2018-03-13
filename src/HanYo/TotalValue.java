@@ -14,14 +14,17 @@ public class  TotalValue {
       if(typer == EnumPantTyper.pantA){
           totalAmountOfMoneyYouGet += pantVærdier.getPantA();
           antalA++;
+          //Insert SQL Statement method here
       }
       if(typer == EnumPantTyper.pantB){
           totalAmountOfMoneyYouGet += pantVærdier.getPantB();
           antalB++;
+          //Insert SQL Statement method here
       }
       if(typer == EnumPantTyper.pantC){
           totalAmountOfMoneyYouGet += pantVærdier.getPantC();
           antalC++;
+          //Insert SQL Statement method here
       }
 
   }
