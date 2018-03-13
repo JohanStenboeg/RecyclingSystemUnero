@@ -1,6 +1,6 @@
 package HanYo;
 
-public class TotalValue {
+public class  TotalValue {
   int antalA = 0;
   int antalB = 0;
   int antalC = 0;
