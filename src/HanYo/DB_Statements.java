@@ -15,9 +15,18 @@ public class DB_Statements {
     //Declare a preparedStatement
     private static PreparedStatement pst = null;
 
+
+    //Create Database
+    public void createDatabase(){
+        String query1 = "create database if not exists RecyclingSystemUnero" + "with" + "OWNER = "
+    }
+
     //Insert data constructor
     public void insertData() {
-        /*
+        String query1 = "create database if not exists RecyclingSystemUnero 'RecyclingSystemUnero' + 'WITH " +
+                "    OWNER = postgres\n" +
+                "    ENCODING = 'UTF8'\n" +
+                "    CONNECTION LIMIT = -1;"
         EmployeeTable employeeTable = new EmployeeTable(41, "Henrik", 100);
         String query1 = "insert into employeeTable (emp) values(?)";
         String query2 = "select * from employeeTable";
