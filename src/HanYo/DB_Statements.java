@@ -17,6 +17,7 @@ public class DB_Statements {
 
     //Insert data constructor
     public void insertData() {
+        /*
         EmployeeTable employeeTable = new EmployeeTable(41, "Henrik", 100);
         String query1 = "insert into employeeTable (emp) values(?)";
         String query2 = "select * from employeeTable";
@@ -67,6 +68,6 @@ public class DB_Statements {
             e.printStackTrace();
             System.out.println("\n--Retrive did not execute--");
             System.out.println("\n--ClassNotFoundException--");
-        }
+        }*/
     }
 }
