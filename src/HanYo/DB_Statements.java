@@ -12,7 +12,7 @@ public class DB_Statements {
     //Declare a preparedStatement
     private static PreparedStatement pst = null;
 
-   private String path ="jdbc:postgresql://localhost/";
+       private String path ="jdbc:postgresql://localhost/";
    private String name = "RecyclingSystemUnero";
    private String username = "postgres";
    private String password = "12345";

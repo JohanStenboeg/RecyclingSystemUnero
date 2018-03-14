@@ -13,9 +13,8 @@ import java.util.ResourceBundle;
 
 public class GuiController {
 
-    Image imageA = new Image("libraryForPictures/helloItsMe.jpg");
     @FXML
-    private Button btn_pantA = new Button("PantA",new ImageView(imageA));
+    private Button btn_pantA;
 
 
     @FXML
@@ -66,7 +65,7 @@ public class GuiController {
         //Printer total i danske donalders aka. pant
         if (e.getSource()==btn_getPant){
             System.out.println("Getter panteren");
-            lbl_kronarz.setText("Du har nu doneret til os");
+            lbl_kronarz.setText("Du har nu doneret "+totalValue.getTotalAmountOfMoneyYouGet()+" kr. til  os.");
             totalValue.resetAlleVærdier();
 
         }
