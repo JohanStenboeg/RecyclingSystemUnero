@@ -3,6 +3,7 @@ package HanYo;
 import java.sql.*;
 
 public class DB_Statements {
+
     //Declare a statement
     private static Statement stmt = null;
     //Declare and create a connection
