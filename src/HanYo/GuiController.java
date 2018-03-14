@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 
 public class GuiController {
 
+
     @FXML
     private Button btn_pantA;
 
@@ -73,6 +74,7 @@ public class GuiController {
 
         //Laver DB.
         if (e.getSource()==btn_CreateDB){
+
             System.out.println("Lavede en db");
 
         }

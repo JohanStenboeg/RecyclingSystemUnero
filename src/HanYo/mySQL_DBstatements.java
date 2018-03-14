@@ -12,7 +12,7 @@ public class mySQL_DBstatements {
     private static Statement stmt = null;
 
     //    Declare & create a connection
-    private static Connection con = DB_Connector.connect();
+    private static Connection con = mySQL_DBconnector.connect();
 
     //    Declare a result set
     private static ResultSet rs = null;
@@ -87,12 +87,12 @@ public class mySQL_DBstatements {
     public void antalFlaskerTableCreate() {
 
         //    SQL statement
-        String query = "create table if not exists AntalFlasker(" +
-               "ID INT (1)"+
-                "pantA INT(1000), " +
-                "pantB INT (1000), " +
-                "pantC INT (1000), " +
-                ")";
+        String query = "create table if not exists AntalFlasker" + "("+
+               "ID INT (1),"+
+                "pantA INT(255), " +
+                "pantB INT (255), " +
+                "pantC INT (255) " +
+                ");";
         try {
 
             //    create statement

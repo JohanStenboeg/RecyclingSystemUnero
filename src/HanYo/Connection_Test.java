@@ -14,5 +14,9 @@ public class Connection_Test {
         Connection conn = mySQL_DBconnector.connect();
         mySQL_DBstatements mySQLDBstatements = new mySQL_DBstatements();
 
+
+        mySQLDBstatements.antalFlaskerTableCreate();
+
+
     }
 }
