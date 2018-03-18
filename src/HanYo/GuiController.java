@@ -34,15 +34,18 @@ public class GuiController {
     private Label lbl_kronarz;
 
     TotalValue totalValue = new TotalValue();
+    mySQL_DBstatements mySQL_dBstatements = new mySQL_DBstatements();
 
     @FXML
     private void handleButtonAction(ActionEvent e) {
+        mySQL_dBstatements.useDB();
 
         //Man ligger en ting ind med Pant A.
         if (e.getSource()==btn_pantA){
             System.out.println("Pant A");
             totalValue.addOnePantItem(EnumPantTyper.pantA);
             lbl_kronarz.setText(totalValue.totalAmountOfMoneyYouGet+" kr.");
+            mySQL_dBstatements.pantIndiDB(EnumPantTyper.pantA);
 
         }
 
@@ -51,6 +54,7 @@ public class GuiController {
             System.out.println("Pant B");
             totalValue.addOnePantItem(EnumPantTyper.pantB);
             lbl_kronarz.setText(totalValue.totalAmountOfMoneyYouGet+" kr.");
+            mySQL_dBstatements.pantIndiDB(EnumPantTyper.pantB);
 
 
         }
@@ -60,6 +64,8 @@ public class GuiController {
             System.out.println("Pant C");
             totalValue.addOnePantItem(EnumPantTyper.pantC);
             lbl_kronarz.setText(totalValue.totalAmountOfMoneyYouGet+" kr.");
+            mySQL_dBstatements.pantIndiDB(EnumPantTyper.pantC);
+
         }
 
 
@@ -74,7 +80,7 @@ public class GuiController {
 
         //Laver DB.
         if (e.getSource()==btn_CreateDB){
-
+            mySQL_dBstatements.antalFlaskerTableCreate();
             System.out.println("Lavede en db");
 
         }
