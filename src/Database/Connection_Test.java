@@ -1,4 +1,7 @@
-package HanYo;
+package Database;
+
+import Database.mySQL_DBconnector;
+import Database.mySQL_DBstatements;
 
 import java.sql.Connection;
 

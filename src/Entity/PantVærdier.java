@@ -1,10 +1,10 @@
-package HanYo;
+package Entity;
 
 public class PantVærdier {
     //Hvor meget de er værd
-    private double pantA = 1;
-    private double pantB = 1.5;
-    private double pantC = 3;
+    private double pantA = 1.00;
+    private double pantB = 1.50;
+    private double pantC = 3.00;
 
     //Gettere
     public double getPantA() {

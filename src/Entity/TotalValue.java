@@ -1,16 +1,16 @@
-package HanYo;
+package Entity;
 
 public class  TotalValue {
   int antalA = 0;
   int antalB = 0;
   int antalC = 0;
 
-  double totalAmountOfMoneyYouGet = 0;
+  public double totalAmountOfMoneyYouGet = 0;
 
   PantVærdier pantVærdier = new PantVærdier();
 
   //Når man panter et item.
-  void addOnePantItem(EnumPantTyper typer){
+  public void addOnePantItem(EnumPantTyper typer){
       if(typer == EnumPantTyper.pantA){
           totalAmountOfMoneyYouGet += pantVærdier.getPantA();
           antalA++;
@@ -48,7 +48,7 @@ public class  TotalValue {
 
 
     //Resetter værdier, (når man slår på print)
-    void resetAlleVærdier() {
+    public void resetAlleVærdier() {
         antalA = 0;
         antalB = 0;
         antalC = 0;

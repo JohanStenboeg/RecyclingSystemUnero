@@ -1,4 +1,6 @@
-package HanYo;
+package Database;
+
+import Entity.EnumPantTyper;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -125,11 +127,26 @@ public class mySQL_DBstatements {
         try {
             stmt = con.createStatement();
             stmt.executeUpdate(query);
-            System.out.println("Flaske tilføjet");
+            System.out.println("  Flaske tilføjet");
         }catch(SQLException ex){
             System.out.println("\n---Flaske blev ikke tilføjet---");
             ex.printStackTrace();
         }
     }
+    public void InsertITable2(){
+        String query ="";
+        query = "insert into AntalFlasker (id, pantA, pantB, pantC) values (1,0,0,0);";
 
+    try {
+        stmt = con.createStatement();
+
+        stmt.executeUpdate(query);
+
+        System.out.println(" Dag tilføjet");
+    }catch(SQLException ex){
+        System.out.println("\n---Dag blev ikke tilføjet---");
+        ex.printStackTrace();
+    }
+
+}
 }

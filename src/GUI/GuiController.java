@@ -1,15 +1,14 @@
-package HanYo;
+package GUI;
 
+import Entity.EnumPantTyper;
+import Entity.TotalValue;
+import Database.mySQL_DBstatements;
 import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.text.DecimalFormat;
 
 public class GuiController {
 
@@ -67,12 +66,13 @@ public class GuiController {
             mySQL_dBstatements.pantIndiDB(EnumPantTyper.pantC);
 
         }
+        DecimalFormat df = new DecimalFormat("#.###");
 
 
         //Printer total i danske donalders aka. pant
         if (e.getSource()==btn_getPant){
             System.out.println("Getter panteren");
-            lbl_kronarz.setText("Du har nu doneret "+totalValue.getTotalAmountOfMoneyYouGet()+" kr. til  os.");
+            lbl_kronarz.setText("Du har nu doneret "+df.format(totalValue.getTotalAmountOfMoneyYouGet())+" kr. til  os.");
             totalValue.resetAlleVærdier();
 
         }
@@ -81,6 +81,7 @@ public class GuiController {
         //Laver DB.
         if (e.getSource()==btn_CreateDB){
             mySQL_dBstatements.antalFlaskerTableCreate();
+            mySQL_dBstatements.InsertITable2();
             System.out.println("Lavede en db");
 
         }
