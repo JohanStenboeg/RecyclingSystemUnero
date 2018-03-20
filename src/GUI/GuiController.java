@@ -1,6 +1,7 @@
 package GUI;
 
 import Entity.EnumPantTyper;
+import Entity.Kvittering;
 import Entity.TotalValue;
 import Database.mySQL_DBstatements;
 import javafx.event.ActionEvent;
@@ -11,7 +12,8 @@ import javafx.scene.control.Label;
 import java.text.DecimalFormat;
 
 public class GuiController {
-
+    DecimalFormat df = new DecimalFormat("####0.00");
+    Kvittering kvittering = new Kvittering();
 
     @FXML
     private Button btn_pantA;
@@ -66,13 +68,13 @@ public class GuiController {
             mySQL_dBstatements.pantIndiDB(EnumPantTyper.pantC);
 
         }
-        DecimalFormat df = new DecimalFormat("#.###");
 
 
         //Printer total i danske donalders aka. pant
         if (e.getSource()==btn_getPant){
             System.out.println("Getter panteren");
             lbl_kronarz.setText("Du har nu doneret "+df.format(totalValue.getTotalAmountOfMoneyYouGet())+" kr. til  os.");
+            kvittering.printkvitbro(totalValue.getTotalAmountOfMoneyYouGet());
             totalValue.resetAlleVærdier();
 
         }
